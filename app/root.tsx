@@ -10,10 +10,10 @@ import {
 
 import type { Route } from './+types/root'
 
+import './global.css'
+
 export function links(): LinkDescriptor[] {
-  return [
-    { rel: "stylesheet", href: "/app/global.css" }
-  ]
+  return []
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -26,8 +26,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
+        <main>
+	  {children}
+        </main>
+	<ScrollRestoration />
         <Scripts />
       </body>
     </html>
@@ -43,9 +45,9 @@ export default function App() {
 export function ErrorBoundary({ error: _error }: Route.ErrorBoundaryProps) {
   let message = 'Unexpected error has occurred.'
 
+  console.error(_error)
+
   return (
-    <main>
       <h1 className="text-xl">{message}</h1>
-    </main>
   )
 }
