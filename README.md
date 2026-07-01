@@ -1,6 +1,8 @@
 # Shopfront-React
 
-This is the frontend page for Shopfront.
+This is the frontend page for [Shopfront](https://github.com/tyqualters/shopfront).
+
+[![Node.js CI Build](https://github.com/tyqualters/shopfront-react/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/tyqualters/shopfront-react/actions/workflows/node.js.yml)
 
 ## Tech Stack
 
