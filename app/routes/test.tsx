@@ -1,11 +1,11 @@
-import NavBar from '../components/navbar.tsx'
+import Header from '../components/header.tsx'
 
 import './test.css'
 
 const Test = () => {
 	return (
 		<>
-			<NavBar />
+			<Header />
 			<p className="font-bold">Hello world!</p>
 		</>
 	)
