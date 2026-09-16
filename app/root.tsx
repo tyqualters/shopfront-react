@@ -6,14 +6,14 @@ import {
   Scripts,
   ScrollRestoration,
   type LinkDescriptor,
-} from 'react-router'
+} from "react-router";
 
-import type { Route } from './+types/root'
+import type { Route } from "./+types/root";
 
-import './global.css'
+import "./global.css";
 
 export function links(): LinkDescriptor[] {
-  return []
+  return [];
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -21,15 +21,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
+        <title>Vender eCommerce</title>
+        <link
+          rel="shortcut icon"
+          href="/assets/Figma_Logo.png"
+          type="image/png"
+        />
+        <link rel="icon" href="/assets/Figma_Logo.png" type="image/png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
       <body>
-        <main>
-	  {children}
-        </main>
-	<ScrollRestoration />
+        <main>{children}</main>
+        <ScrollRestoration />
         <Scripts />
       </body>
     </html>
@@ -37,17 +42,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return (
-  	<Outlet />
-  )
+  return <Outlet />;
 }
 
 export function ErrorBoundary({ error: _error }: Route.ErrorBoundaryProps) {
-  let message = 'Unexpected error has occurred.'
+  let message = "Unexpected error has occurred.";
 
-  console.error(_error)
+  console.error(_error);
 
-  return (
-      <h1 className="text-xl">{message}</h1>
-  )
+  return <h1 className="text-xl">{message}</h1>;
 }

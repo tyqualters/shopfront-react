@@ -1,8 +1,0 @@
-/* Note: Due to nature of CSR, this background and other styles will be cached across pages until a refresh occurs */
-body {
-	background: url('https://cdn.wallpapersafari.com/93/26/BePGk2.jpg');
-	background-size: cover;
-	background-origin: center center;
-	background-repeat: no-repeat;
-}
-

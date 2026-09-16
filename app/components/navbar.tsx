@@ -1,16 +1,57 @@
-import { Link } from 'react-router'
+import { Link } from "react-router";
 
 const NavBar = () => {
-	return (
-		<nav>
-			<ul className="flex flex-row justify-center items-center space-x-2 list-none">
-				<li><Link to="/" className="text-black hover:text-white hover:text-shadow-md">Home</Link></li>
-				<li><Link to="/test" className="text-black hover:text-white hover:text-shadow-md">Test</Link></li>
-				<li><Link to="/register" className="text-black hover:text-white hover:text-shadow-md">Register</Link></li>
-				<li><Link to="/login" className="text-black hover:text-white hover:text-shadow-md">Login</Link></li>
-			</ul>
-		</nav>
-	)
-}
+  return (
+    <ul className="flex flex-wrap items-center justify-center gap-2 my-2 md:my-0">
+      <li>
+        <Link
+          to="/"
+          className="px-2 py-1 text-base-content/70 hover:text-base-content transition-colors"
+        >
+          Home
+        </Link>
+      </li>
+      <li>
+        <div
+          className="tooltip tooltip-bottom"
+          data-tip="Page under construction"
+        >
+          <Link
+            to="#"
+            className="px-2 py-1 text-base-content/70 hover:text-base-content transition-colors pointer-events-none cursor-not-allowed"
+          >
+            Pricing
+          </Link>
+        </div>
+      </li>
+      <li>
+        <div
+          className="tooltip tooltip-bottom"
+          data-tip="Page under construction"
+        >
+          <Link
+            to="#"
+            className="px-2 py-1 text-base-content/70 hover:text-base-content transition-colors pointer-events-none cursor-not-allowed"
+          >
+            Contact
+          </Link>
+        </div>
+      </li>
+      <li>
+        <div
+          className="tooltip tooltip-bottom"
+          data-tip="Page under construction"
+        >
+          <Link
+            to="#"
+            className="px-2 py-1 text-base-content/70 hover:text-base-content transition-colors pointer-events-none cursor-not-allowed"
+          >
+            Developers
+          </Link>
+        </div>
+      </li>
+    </ul>
+  );
+};
 
-export default NavBar
+export default NavBar;
