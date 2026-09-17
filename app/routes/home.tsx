@@ -115,7 +115,7 @@ const Home = () => {
             />
             <div>
               <h3 className="font-bold text-xl text-base-content mb-1">
-                Secure by Design
+                Secure by design
               </h3>
               <p className="text-base-content/70">
                 Keep your password safe, we&apos;ll take care of the rest.
