@@ -1,33 +1,17 @@
 import { AuthWrapper } from "../components/authwrap.tsx";
 import { Navigate } from "react-router";
+import { useOutletContext } from "react-router";
 
-/* Get data from the layout page */
-
-//import { useOutletContext } from "react-router";
-//
-//interface ShopContext {
-//  shopSessionData: {
-//    shopName: string;
-//    permissions: string[];
-//    currency: string;
-//  };
-//}
-//
-//export default function ShopOverview() {
-//  // Reads directly from the parent Outlet context without making a network request
-//  const { shopSessionData } = useOutletContext<ShopContext>();
-//
-//  return (
-//    <div>
-//      <h1>Welcome to {shopSessionData.shopName}</h1>
-//      <p>Currency: {shopSessionData.currency}</p>
-//    </div>
-//  );
-//}
-
-/* End */
+interface UserContext {
+  userSessionData: {
+    email: string;
+    gravatar: string;
+    uid: number;
+  };
+}
 
 function Dashboard() {
+  const { userSessionData } = useOutletContext<UserContext>();
   return (
     <>
       <AuthWrapper fallback={<Navigate to="/login" replace />}>
@@ -74,10 +58,7 @@ function Dashboard() {
                     className="btn btn-ghost btn-circle avatar"
                   >
                     <div className="w-10 rounded-full">
-                      <img
-                        alt="User Avatar"
-                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                      />
+                      <img alt="User Avatar" src={userSessionData.gravatar} />
                     </div>
                   </div>
                   <ul

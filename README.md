@@ -7,8 +7,11 @@ This is the frontend page for [Shopfront](https://github.com/tyqualters/shopfron
 ## Progress
 
 - [x] Basic Routes
-- [ ] `<AuthProvider />`
-- [ ] /user route
+- [x] `<AuthWrapper />`
+- [x] /dashboard routes
+- [ ] /api/whoami req struct def
+- [ ] /api/shops route
+- [ ] Functional dashboard
 
 ## Tech Stack
 
