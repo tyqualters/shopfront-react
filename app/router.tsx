@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router";
 
-import { defaultRoutes } from "./default-routes";
-import { tenantRoutes } from "./tenant-routes";
-import { getAppType } from "./tenant";
+import { defaultRoutes } from "./routes.default";
+import { tenantRoutes } from "./routes.tenant";
+import { getAppType } from "./resolver";
 
 const routes = getAppType() === "tenant" ? tenantRoutes : defaultRoutes;
 

@@ -4,12 +4,10 @@ export function getAppType(): AppType {
   const hostname = window.location.hostname.toLowerCase();
 
   switch (hostname) {
-    case "example2.com":
-    case "www.example2.com":
+    case "dev.local":
       return "tenant";
 
-    case "example1.com":
-    case "www.example1.com":
+    case "localhost":
     default:
       return "default";
   }

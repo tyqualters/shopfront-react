@@ -12,8 +12,8 @@ This is the frontend page for [Shopfront](https://github.com/tyqualters/shopfron
 - [x] `<AuthWrapper />`
 - [x] /dashboard routes
 - [x] /api shops route
+- [x] Move away from Framework routing
 - [ ] Multi-tenancy routing
-- [ ] **PRIORITY:** Move away from Framework routing
 - [ ] Functional dashboard
 
 ## Tech Stack

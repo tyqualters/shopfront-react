@@ -1,7 +1,7 @@
 import type { RouteObject } from "react-router";
 
-import DefaultLayout from "./layouts/default-layout";
-import DashboardLayout from "./routes/dashboard-layout";
+import DefaultLayout from "./layouts/mainlayout";
+import DashboardLayout from "./layouts/dashboard-layout";
 
 import Home from "./routes/home";
 import Register from "./routes/register";
@@ -13,7 +13,6 @@ import ShopView from "./routes/shop-view";
 
 import DashboardRedirect from "./routes/dashboard-redirect";
 import DashboardOverview from "./routes/dashboard-overview";
-import DashboardSettings from "./routes/dashboard-settings";
 
 export const defaultRoutes: RouteObject[] = [
   {
@@ -66,10 +65,6 @@ export const defaultRoutes: RouteObject[] = [
           {
             path: "dashboard/:shopId/overview",
             Component: DashboardOverview,
-          },
-          {
-            path: "dashboard/:shopId/settings",
-            Component: DashboardSettings,
           },
         ],
       },
