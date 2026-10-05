@@ -11,8 +11,9 @@ This is the frontend page for [Shopfront](https://github.com/tyqualters/shopfron
 - [x] Basic Routes
 - [x] `<AuthWrapper />`
 - [x] /dashboard routes
-- [ ] /api/whoami req struct def
-- [ ] /api/shops route
+- [x] /api shops route
+- [ ] Multi-tenancy routing
+- [ ] **PRIORITY:** Move away from Framework routing
 - [ ] Functional dashboard
 
 ## Tech Stack
