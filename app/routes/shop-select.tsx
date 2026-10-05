@@ -11,7 +11,7 @@ export function ListShops() {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    fetch("/api/shops")
+    fetch("/api/my-shops")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch shops");
@@ -58,6 +58,9 @@ function DashboardLayout() {
         <div className="w-full max-w-2xl flex flex-col gap-2 p-10 items-stretch">
           <h1 className="text-3xl font-bold">Select a shop</h1>
           <ListShops />
+          <Link to="/register-shop" className="btn btn-secondary btn-lg w-full">
+            Create new shop
+          </Link>
         </div>
       </div>
     </>
