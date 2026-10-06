@@ -1,18 +1,18 @@
 import type { RouteObject } from "react-router";
 
-import DefaultLayout from "./layouts/mainlayout";
-import DashboardLayout from "./layouts/dashboard-layout";
+import DefaultLayout from "./layouts/layout.default";
+import DashboardLayout, { shopLayoutLoader } from "./layouts/layout.dashboard";
 
-import Home from "./routes/home";
+import Home from "./routes/default/home.default";
 import Register from "./routes/register";
-import RegisterShop from "./routes/register-shop";
-import RegisterProduct from "./routes/register-product";
+import RegisterShop from "./routes/default/new-shop.default";
+import RegisterProduct from "./routes/default/new-product.default";
 import Login from "./routes/login";
-import ShopSelect from "./routes/shop-select";
-import ShopView from "./routes/shop-view";
+import ShopSelect from "./routes/default/select-shop.default";
+import ShopView from "./routes/blank";
 
-import DashboardRedirect from "./routes/dashboard-redirect";
-import DashboardOverview from "./routes/dashboard-overview";
+import DashboardRedirect from "./routes/default/dashboard/redirect.dashboard";
+import DashboardOverview from "./routes/default/dashboard/overview.dashboard";
 
 export const defaultRoutes: RouteObject[] = [
   {
@@ -56,6 +56,7 @@ export const defaultRoutes: RouteObject[] = [
 
       {
         Component: DashboardLayout,
+        loader: shopLayoutLoader,
 
         children: [
           {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
-import NavBar from "./navbar.tsx";
-import { AuthWrapper } from "./authwrap.tsx";
+import NavBar from "./navbar";
+import { AuthWrapper } from "./authwrapper";
 
 const Logout = async (e: React.MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();

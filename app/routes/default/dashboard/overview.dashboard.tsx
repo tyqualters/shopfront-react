@@ -1,4 +1,4 @@
-import { AuthWrapper } from "../components/authwrap.tsx";
+import { AuthWrapper } from "@/components/authwrapper";
 import { Navigate } from "react-router";
 import { useOutletContext } from "react-router";
 

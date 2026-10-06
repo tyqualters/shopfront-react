@@ -1,7 +1,7 @@
 import type { RouteObject } from "react-router";
 
-import TenantLayout from "./layouts/tenantlayout";
-import TenantHome from "./routes/shophome";
+import TenantLayout from "./layouts/layout.tenant";
+import TenantHome from "./routes/tenant/home.tenant";
 
 export const tenantRoutes: RouteObject[] = [
   {
